@@ -1,0 +1,204 @@
+// All custom styles partials
+@import "vars";
+@import "font";
+
+// Brand classes
+.color-brand--tan { color: $brand-tan !important; }
+.color-brand--dark { color: $brand-dark !important; }
+.color-brand--yellow { color: $brand-yellow !important; }
+.color-brand--primary { color: $brand-primary !important; }
+
+.bg-brand--dark { background-color: $brand-dark !important; }
+.bg-brand--primary { background-color: $brand-primary !important; } 
+.bg-brand--yellow { background-color: $brand-yellow !important; }
+
+.bg-img--brand {
+	background-color: $brand-dark;
+  background-position: bottom right;
+	background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+	background-image: url('../img/bg-trees.png');
+}
+.bg-img--trees { 
+  background-size: 85%;
+	@extend .bg-img--brand; 
+}
+.bg-img--trees-lg { 
+  background-size: 85%;
+	@extend .bg-img--brand; 
+}
+
+.border-brand--yellow { 
+	border-top: 5px solid $brand-yellow; 
+	border-bottom: 5px solid $brand-yellow; 
+}
+.font-brand--headings { font-family: $headings-font-family; }
+
+// General element styles
+body {
+	position: relative;
+	height: 100%;
+	overflow-y: scroll;
+	color: $brand-dark;
+	font-family: $font-family-base;
+}
+
+a { 
+	color: $brand-dark;
+
+	&:hover { color: $brand-primary; }
+
+ }
+
+section {
+	h2 { 
+		font-size: 1.5rem;
+		margin-bottom: 2rem; 
+	}
+
+	h1,
+	h2,
+	h3 { font-family: $headings-font-family; }
+}
+
+.content-wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.jumbotron-container { height: 40vh; }
+
+.jumbo-heading { 
+	margin: 0 auto;	
+
+	h1 { font-size: 1.7rem; }
+ }
+
+.content-list {
+	width: 100%;
+
+	h3 { font-size: 1rem; }
+}
+
+.content-item {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	margin: 1rem;
+	position: relative;
+}
+
+.accordion-icon {
+	width: 7rem;
+	height: 7rem;
+}
+
+.content-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 1rem 0;
+}
+
+.contact-form button { width: 50%; }
+
+.services-btn {
+	background: transparent;
+  border: 0;
+  outline: none;
+
+  &:focus { outline: none; }
+
+  h3 { font-size: 1rem; }
+}
+
+.footer-nav {
+	width: 100%;
+}
+
+.footer-sign-up { max-width: 35rem; }
+
+.copyright-list {
+	color: #ccc;
+	font-size: 0.7rem;
+}
+
+.twp-logo {
+	width: 100%;
+	max-width: 5rem;
+}
+
+.twp-link {
+	font-size: 0.7rem;
+}
+
+// Bootstrap Overrides
+.jumbotron {
+	background-image: url('../img/hero-bg.jpg');
+	background-size: cover;    
+	background-position: center center;
+	background-color: $brand-dark;
+	position: relative;
+	border-radius: 0;
+
+	.lead { font-size: 1rem; }
+}
+
+.navbar { box-shadow: 0px 2px 9px 1px rgba(56,68,68,0.2); }
+
+.navbar-light .navbar-toggler { 
+	border: 0;
+	outline: none; 
+}
+
+.nav-link {
+	font-size: 1rem;
+	@extend .font-brand--headings;
+}
+
+.card { border: 0; }
+
+.card-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background: transparent;
+  border: 0;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: center;
+  color: $brand-primary;
+
+  &.active { 
+  	color: $brand-yellow !important; 
+  	border: 0;
+  }
+
+  &:hover { 
+  	border: 0;
+  	color: $brand-primary; 
+  	transform: scale(1.1);
+    transition: all ease-in-out .25s;
+  }
+
+  h3 { 
+  	font-size: 0.75rem; 
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+.nav-tabs { 
+	border: 0;
+	flex-wrap: nowrap; 
+	justify-content: space-between;
+}
+
+.tab-pane { font-size: 0.75rem; }
+
+
+@import "responsive";
